@@ -1,0 +1,276 @@
+body {
+    background-color: #f7f7f7;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    background-color: #6484a4;
+}
+
+.header__info {
+    display: flex;
+    width: 9rem;
+    gap: 1rem;
+    align-items: center;
+    padding-left: 0.9rem;
+
+}
+
+.header__info--img {
+    border-radius: 6.25rem;
+    height: 3.3rem;
+}
+
+.header__info--userName {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#header__logout {
+    width: 5.8rem;
+    height: 2.4rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #2e5864;
+    color: white;
+    margin-right: 3.12rem;
+}
+
+.allPosts_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postArea {
+    width: 47%;
+    display: flex;
+    background-color: #ffffff;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 0.6rem;
+    margin: 0 auto;
+    margin-bottom: 2.3rem;
+    box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
+
+}
+
+textarea {
+    width: 100%;
+    height: 7rem;
+    border: none;
+    resize: none;
+    overflow: auto;
+    padding: 1rem;
+    border-radius: 0.6rem;
+}
+
+#postArea__btnPost {
+    border: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0px;
+    border-radius: 0.3rem;
+    background-color: #2e5864;
+    opacity: 50%;
+    color: white;
+}
+
+.allPosts__each {
+    display: flex;
+    width: 45%;
+    background-color: #ffffff;
+    margin-bottom: 1.7rem;
+    /* talvez, talve nao */
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 1rem;
+    position: relative;
+    border-radius: 0.3rem;
+    box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
+}
+
+
+.allPosts__each--img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 6.25rem;
+}
+
+.allPosts__each--div {
+    margin: 1rem 0rem 0.5rem 1rem;
+    width: 100%;
+
+}
+
+.allPosts__each--userName {
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+
+}
+
+.allPosts__each--content {
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: #5F5C5C;
+    width: 100%
+}
+
+.allPosts__each--editPost {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 4rem;
+
+}
+
+.editArea__btnEdit,
+.editArea__btnDelete {
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin-right: 0px;
+}
+
+.editArea__btnEdit {
+    color: #6495ED;
+}
+
+.editArea__btnDelete {
+    color: #ED6464;
+
+}
+
+.allPosts__each--date {
+    font-size: 0.5rem;
+    color: #989898;
+    position: absolute;
+    bottom: 0.5rem;
+}
+
+
+.allPosts__each--editArea {
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 9, 19, 0.527);
+}
+
+.modal>.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+.modal__inner {
+    background-color: rgba(245, 245, 245, 0.911);
+    width: 30%;
+    height: 55%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.modal__textArea {
+    width: 85%;
+    height: 60%;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    background-color: #ebebeb;
+}
+
+.modal__btnClose {
+    border: none;
+    width: 20px;
+    background-color: transparent;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    border: 2px solid #2e5864;
+
+}
+
+.modal__btnSend {
+    margin-top: 3%;
+    width: 30%;
+    height: 10%;
+    border: none;
+    border-radius: 9px;
+    background-color: #6484a4;
+    color: #ffffff;
+}
+
+.btnCloseImg {
+    width: 1.3vw;
+    opacity: 30%;
+    color: #2e5864;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#postArea__btnPost:hover {
+    background-color: #2e5864;
+    opacity: 70%;
+    transition: 144ms;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+#header__logout:hover {
+    background-color: #274b55;
+    transition: 144ms;
+}
+
+.modal__btnSend:hover{
+    background-color: #597794;
+}
+.editArea__btnDelete:hover {
+    color: #d65a5a;
+}
+.editArea__btnEdit:hover {
+    color: #557fce;
+}
