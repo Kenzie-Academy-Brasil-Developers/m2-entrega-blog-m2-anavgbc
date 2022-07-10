@@ -24,7 +24,6 @@ export default class Elements {
     static async posts() {
         const content = await Posts.getAllPosts()
         const allPosts = content.data
-        console.log(allPosts[0])
 
         allPosts.forEach((elem) => {
             const { avatarUrl, id, username } = elem.user

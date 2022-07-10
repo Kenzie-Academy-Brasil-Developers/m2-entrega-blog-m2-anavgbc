@@ -1,7 +1,6 @@
 body {
     background-color: #f7f7f7;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 header {
@@ -19,7 +18,6 @@ header {
     gap: 1rem;
     align-items: center;
     padding-left: 0.9rem;
-
 }
 
 .header__info--img {
@@ -34,15 +32,14 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
-
 #header__logout {
-    width: 5.8rem;
+    width: 5rem;
     height: 2.4rem;
     border-radius: 5px;
     border: none;
     background-color: #2e5864;
     color: white;
-    margin-right: 3.12rem;
+    margin-right: 1.9rem;
 }
 
 .allPosts_list {
@@ -52,7 +49,7 @@ header {
 }
 
 .postArea {
-    width: 47%;
+    width: 84%;
     display: flex;
     background-color: #ffffff;
     align-items: flex-end;
@@ -64,7 +61,6 @@ header {
     box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
     -webkit-box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
-
 }
 
 textarea {
@@ -90,13 +86,12 @@ textarea {
 
 .allPosts__each {
     display: flex;
-    width: 45%;
+    width: 75%;
     background-color: #ffffff;
     margin-bottom: 1.7rem;
-    /* talvez, talve nao */
     flex-wrap: nowrap;
     flex-direction: row;
-    padding: 1rem;
+    padding: 1.3rem;
     position: relative;
     border-radius: 0.3rem;
     box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
@@ -104,22 +99,21 @@ textarea {
     -moz-box-shadow: 2px 3px 8px -1px rgba(0, 0, 0, 0.24);
 }
 
-
 .allPosts__each--img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 6.25rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 3.25rem;
 }
 
 .allPosts__each--div {
-    margin: 1rem 0rem 0.5rem 1rem;
-    width: 100%;
+    margin: 0.5rem 0rem 0.5rem 1rem;
+    width: 70%;
 
 }
 
 .allPosts__each--userName {
     font-weight: 700;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 
 }
 
@@ -132,11 +126,10 @@ textarea {
 
 .allPosts__each--editPost {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    width: 4rem;
-
+    width: 2.3rem;
+    align-content: flex-end;
 }
 
 .editArea__btnEdit,
@@ -154,7 +147,6 @@ textarea {
 
 .editArea__btnDelete {
     color: #ED6464;
-
 }
 
 .allPosts__each--date {
@@ -192,19 +184,18 @@ textarea {
 
 .modal__inner {
     background-color: rgba(245, 245, 245, 0.911);
-    width: 30%;
-    height: 55%;
+    width: 70vw;
+    height: 40vh;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
 
 .modal__textArea {
-    width: 85%;
+    width: 80%;
     height: 60%;
     border-radius: 8px;
     background-color: transparent;
@@ -227,12 +218,11 @@ textarea {
     top: 5px;
     right: 8px;
     border: 2px solid #2e5864;
-
 }
 
 .modal__btnSend {
     margin-top: 3%;
-    width: 30%;
+    width: 40%;
     height: 10%;
     border: none;
     border-radius: 9px;
@@ -241,9 +231,45 @@ textarea {
 }
 
 .btnCloseImg {
-    width: 1.3vw;
+    width: 330%;
     opacity: 30%;
     color: #2e5864;
+}
+
+.modal__inner--logout {
+    background-color: rgba(245, 245, 245, 0.911);
+    width: 75vw;
+    height: 25vh;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logout__btnClose,
+.logout__btnConfirm {
+    border: none;
+    border-radius: 9px;
+    background-color: #6484a4;
+    color: #ffffff;
+    margin-top: 3%;
+    width: 30%;
+    height: 100%;
+    font-weight: 500;
+}
+
+.logout__div {
+    margin-top: 1rem;
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal__inner--logout>h3 {
+    font-weight: 500;
 }
 
 button:hover {
@@ -260,17 +286,73 @@ textarea:focus {
     outline: 0;
 }
 
-#header__logout:hover {
+#header__logout:hover{
     background-color: #274b55;
     transition: 144ms;
 }
 
-.modal__btnSend:hover{
+.modal__btnSend:hover, .logout__btnClose:hover,
+.logout__btnConfirm:hover  {
     background-color: #597794;
 }
+
 .editArea__btnDelete:hover {
     color: #d65a5a;
 }
+
 .editArea__btnEdit:hover {
     color: #557fce;
+}
+
+@media screen and (min-width: 768px) {
+
+    .allPosts__each {
+        width: 45%;
+        padding: 1rem;
+    }
+
+    .allPosts__each--img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 6.25rem;
+    }
+
+    .postArea {
+        width: 47%;
+    }
+
+    .allPosts__each--div {
+        width: 100%;
+
+    }
+
+    .allPosts__each--editPost {
+        width: 4rem;
+        flex-direction: column;
+    }
+
+    #header__logout {
+        width: 5.8rem;
+        margin-right: 3.12rem;
+    }
+
+    .modal__inner {
+        width: 30vw;
+    }
+
+    .modal__textArea {
+        width: 85%;
+    }
+
+    .modal__btnSend {
+        width: 30%;
+    }
+
+    .modal__inner--logout {
+        background-color: rgba(245, 245, 245, 0.911);
+        width: 25vw;
+        height: 25vh;
+        font-weight: 750;
+    }
+
 }

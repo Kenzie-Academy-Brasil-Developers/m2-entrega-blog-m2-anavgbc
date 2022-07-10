@@ -2,15 +2,13 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #6484a4;
 }
-.container{
-    position:relative;
+.divContainer{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
 }
-.user{
-    position: absolute;
-    left: 38vw;
-    top: 10vh;
-}
-
 
 .user, .user__form {
     display: flex;
@@ -27,7 +25,6 @@ body {
     background-color: #F3F3F3;
     padding: 5px;
     padding-left: 12px;
-
 }
 
 #user__button {
@@ -49,19 +46,74 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* divContainer */
-
-
-
-
 p,
 a {
     font-size: 0.8rem;
 }
 
+.hidden{
+    display: none;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 9, 19, 0.527);
+}
+
+.modal>.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+.modal__inner--error {
+    background-color: rgba(245, 245, 245, 0.911);
+    width: 70vw;
+    height: 15vh;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.modal__inner--error> h3{
+    text-align: center;
+    padding: 0.7rem;
+}
+
+.error__btnClose {
+    width: 20px;
+    background-color: transparent;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    border: 2px solid #23424b;
+}
+
+.error__btnClose > img{
+    width: 330%;
+    opacity: 30%;
+    color: #642e2e;
+}
+
 #user__button:hover {
     background-color: #23424b;
     transition: 144ms;
+}
+button:hover{
+    cursor: pointer;
 }
 
 a:hover{
@@ -71,4 +123,17 @@ a:hover{
 
 input:focus{
     outline: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .modal__inner--error {
+        background-color: rgba(245, 245, 245, 0.911);
+        width: 25vw;
+        height: 25vh;
+    }
+    
+    .modal__inner--error> h3{
+        font-size: 1.2rem;
+    }
 }

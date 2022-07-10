@@ -1,8 +1,8 @@
 import Posts from "./post.controller.js";
 
 export default class Modal {
-    static modal = document.getElementsByClassName("modal__edit")[0]
-
+    static modalEdit = document.getElementsByClassName("modal__edit")[0]
+    static modalLogout = document.getElementsByClassName("modal__logout")[0]
 
     static modalEditPost(id) {
         const container = document.createElement("div")
@@ -29,7 +29,7 @@ export default class Modal {
 
         btnClose.addEventListener("click", (event) => {
             event.preventDefault()
-            this.modal.classList.add("hidden")
+            this.modalEdit.classList.add("hidden")
         })
 
         btnSend.addEventListener("click", async (event) => {
@@ -42,6 +42,46 @@ export default class Modal {
         modalInner.append(btnClose, textArea, btnSend)
         btnClose.append(imgClose)
         container.append(modalInner)
-        this.modal.append(container)
+        this.modalEdit.append(container)
     }
+
+    static modal_Logout() {
+        const containerLogout = document.createElement("div")
+        const modalInner = document.createElement("div")
+        const modal_div = document.createElement("div")
+
+
+        const btnConfirm = document.createElement("button")
+        const btnClose = document.createElement("button")
+
+        const h3 = document.createElement("h3")
+
+        containerLogout.classList.add("container")
+        modalInner.classList.add("modal__inner--logout")
+        btnClose.classList.add("logout__btnClose")
+        btnConfirm.classList.add("logout__btnConfirm")
+        modal_div.classList.add("logout__div")
+
+
+        h3.innerText = "Tem certeza que deseja sair?"
+        btnConfirm.innerText = "Confirmar"
+        btnClose.innerText = "Fechar"
+
+        btnClose.addEventListener("click", (event) => {
+            event.preventDefault()
+            this.modalLogout.classList.add("hidden")
+        })
+
+        btnConfirm.addEventListener("click", (event) => {
+            event.preventDefault()
+            localStorage.clear()
+            window.location.href = "../views/login.html"
+        })
+
+        modalInner.append(h3, modal_div)
+        modal_div.append(btnConfirm, btnClose)
+        containerLogout.append(modalInner)
+        this.modalLogout.append(containerLogout)
+    }
+
 }

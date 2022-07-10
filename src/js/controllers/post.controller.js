@@ -14,7 +14,6 @@ export default class Posts {
             .then(res => res.json())
             .then(res => res)
             .catch(err => err)
-        console.log(response)
         return response
     }
 
@@ -28,7 +27,6 @@ export default class Posts {
             .then(res => res)
             .catch(err => err)
 
-        console.log(response)
         return response
     }
 
@@ -51,7 +49,6 @@ export default class Posts {
             .then(res => res)
             .catch(err => err)
 
-        console.log(response)
         return response
 
     }

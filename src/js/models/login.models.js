@@ -14,53 +14,15 @@ export default class LoginData {
             formSpread.forEach((input) => {
                 dataLogin[input.name] = input.value
             })
+            const obj = Object.keys(await LoginRequest.login(dataLogin))
+            console.log(obj)
 
-            console.log(dataLogin)
-            await LoginRequest.login(dataLogin)
-            console.log(dataLogin)
-
-            if (JSON.parse(localStorage.getItem("@kenzie-blog:token")) !== "null") {
+            if (obj.length > 1) {
                 window.location.href = "../views/main.html"
-                
             } else {
-                console.log("opa deu errroooo!!")
-            }//else SAIR UM MODAL DIZENDO QUE NAO EXISTE USUARIOOOOOOOOOOO
+                const modal = document.getElementsByClassName("modal__errorLogin")[0]
+                modal.classList.remove("hidden")
+            }
         })
     }
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-// function loginData() {
-//     const form = document.getElementsByClassName("login__form")[0]
-//     const button = document.getElementById("login__button")
-
-
-//     button.addEventListener("click", async (event) => {
-//         event.preventDefault()
-
-//         const formSpread = [...form]
-//         formSpread.forEach((input) => {
-//             dataLogin[input.name] = input.value
-//         })
-//         await LoginRequest.login(dataLogin)
-//         console.log(dataLogin)
-
-//         if (JSON.parse(localStorage.getItem("@kenzie-blog:token")) !== "null") {
-//             window.location.href = "../../../main.html"
-//         }//else SAIR UM MODAL DIZENDO QUE NAO EXISTE USUARIOOOOOOOOOOO
-//     })
-// }
-// loginData()

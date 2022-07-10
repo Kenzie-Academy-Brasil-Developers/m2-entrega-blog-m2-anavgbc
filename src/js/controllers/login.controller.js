@@ -1,4 +1,5 @@
 export default class LoginRequest {
+    
     static async login(dataLogin) {
         const url = "https://blog-m2.herokuapp.com/users/login"
         const response = await fetch(url, {
@@ -17,8 +18,7 @@ export default class LoginRequest {
             })
             .catch(err => err)
 
-        console.log(response)
-        return response
+            return response
     }
 }
 

@@ -1,13 +1,15 @@
 import Posts from "../controllers/post.controller.js"
+import Modal from "../controllers/modalMain.controller.js"
 
 export default class BtnPost {
 
     static logout() {
         const btnLogout = document.getElementById("header__logout")
+        const modalLogout = document.getElementsByClassName("modal__logout")[0]
         btnLogout.addEventListener("click", (event) => {
             event.preventDefault()
-            localStorage.clear()
-            window.location.href = "../views/login.html"
+            modalLogout.classList.remove("hidden")
+            Modal.modal_Logout()
         })
     }
 
@@ -19,7 +21,6 @@ export default class BtnPost {
         btnPost.addEventListener("click", async (event) => {
             event.preventDefault()
             dataPost.content = textArea.value
-            console.log(dataPost)
             await Posts.writePost(dataPost)
             location.reload()
         })
